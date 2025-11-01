@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Manhattan Project Light Theme */
+    --background: 210 20% 97%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 212 95% 12%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 94%;
+    --secondary-foreground: 212 95% 12%;
+
+    --muted: 210 15% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 24 100% 50%;
+
+    --radius: 1rem;
+
+    /* Custom Manhattan Project tokens */
+    --hero-gradient-start: 212 95% 12%;
+    --hero-gradient-end: 24 100% 45%;
+    --section-bg: 0 0% 100%;
+    --sidebar-bg: 210 20% 98%;
+    --link-hover: 24 100% 60%;
+  }
+
+  .dark {
+    /* Manhattan Project Dark Theme (Default) */
+    --background: 215 30% 7%;
+    --foreground: 210 30% 93%;
+
+    --card: 215 25% 11%;
+    --card-foreground: 210 30% 93%;
+
+    --popover: 215 25% 11%;
+    --popover-foreground: 210 30% 93%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 215 30% 7%;
+
+    --secondary: 217 25% 15%;
+    --secondary-foreground: 210 30% 93%;
+
+    --muted: 217 25% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 30 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 25% 18%;
+    --input: 217 25% 18%;
+    --ring: 30 100% 55%;
+
+    /* Custom Manhattan Project dark tokens */
+    --hero-gradient-start: 212 95% 12%;
+    --hero-gradient-end: 24 100% 45%;
+    --section-bg: 215 25% 11%;
+    --sidebar-bg: 215 30% 9%;
+    --link-hover: 30 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+  }
+
+  .section-card {
+    @apply bg-card border-l-4 border-accent rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+  }
+
+  .device-card {
+    @apply bg-card rounded-xl shadow-md border border-border p-6 transition-all duration-300 hover:shadow-lg hover:scale-105;
+  }
+
+  .accent-btn {
+    @apply bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:opacity-90 hover:scale-105;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
