@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "credentialSubject": {
+    "capacity": "500GB",
+    "id": "urn:device:WD-TEST-123456",
+    "model": "WD Blue SSD",
+    "passes": 1,
+    "sanitizationMethod": "ATA Secure Erase",
+    "serialNumber": "WD-TEST-123456",
+    "timestamp": "2025-11-02T00:00:00Z"
+  },
+  "issuanceDate": "2025-11-02T00:00:00Z",
+  "issuer": "did:manhattan:sanitization-engine",
+  "proof": {
+    "created": "2025-11-02T00:00:00Z",
+    "proofPurpose": "assertionMethod",
+    "type": "Ed25519Signature2020"
+  },
+  "type": [
+    "VerifiableCredential",
+    "SanitizationCertificate"
+  ]
+}

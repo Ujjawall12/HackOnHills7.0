@@ -1,0 +1,16 @@
+[package]
+name = "manhattan_registry"
+version = "1.0.0"
+authors = []
+
+[addresses]
+manhattan_registry = "d2d618ed1248e1ac5f715991af3de929f8f4aa064983956c01ca77521178ed05"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]

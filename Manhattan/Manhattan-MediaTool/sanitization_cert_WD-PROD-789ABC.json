@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "credentialSubject": {
+    "capacity": "1TB",
+    "id": "urn:device:WD-PROD-789ABC",
+    "model": "Samsung EVO SSD",
+    "passes": 1,
+    "sanitizationMethod": "ATA Secure Erase",
+    "serialNumber": "WD-PROD-789ABC",
+    "timestamp": "2025-11-02T12:00:00Z"
+  },
+  "issuanceDate": "2025-11-02T12:00:00Z",
+  "issuer": "did:manhattan:sanitization-engine",
+  "proof": {
+    "created": "2025-11-02T12:00:00Z",
+    "proofPurpose": "assertionMethod",
+    "type": "Ed25519Signature2020"
+  },
+  "type": [
+    "VerifiableCredential",
+    "SanitizationCertificate"
+  ]
+}
